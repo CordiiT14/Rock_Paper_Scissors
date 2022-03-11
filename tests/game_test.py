@@ -33,13 +33,26 @@ class TestGame(unittest.TestCase):
         self.game.add_players(self.player3)  
         self.assertEqual("Two players only", self.game.add_players(self.player3))
     
-    # def test_return_winner_rock(self):
-    #     self.game.add_players(self.player1)
-    #     self.game.add_players(self.player2)
-    #     winner = Game.return_winner(self.game)
-    #     self.assertEqual("Rock Wins!", winner)
-
     def test_return_winner_rock(self):
-        self.game.players = [self.player1, self.player2]
-        winner = Game.return_winner(self.game)
-        self.assertEqual('Rock Wins!', winner)
+        self.game.add_players(self.player1)
+        self.game.add_players(self.player2)
+        winner = Game.return_winner(self, self.game)
+        self.assertEqual("Rock Wins!", winner)
+
+    def test_return_winner_scissors(self):
+        self.game.add_players(self.player2)
+        self.game.add_players(self.player3)
+        winner = Game.return_winner(self, self.game)
+        self.assertEqual("Scissors Win!", winner)
+
+    def test_return_winner_paper(self):
+        self.game.add_players(self.player1)
+        self.game.add_players(self.player3)
+        winner = Game.return_winner(self, self.game)
+        self.assertEqual("Paper Wins!", winner)
+    
+    def test_return_winner_none(self):
+        self.game.add_players(self.player2)
+        self.game.add_players(self.player2)
+        winner = Game.return_winner(self, self.game)
+        self.assertEqual( None , winner)
