@@ -2,7 +2,7 @@ from random import choices
 from models.player import Player
 
 class Game():
-    def __init__(self, ):
+    def __init__(self):
         self.players = []
 
     def add_players(self, player):
