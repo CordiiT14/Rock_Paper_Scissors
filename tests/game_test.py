@@ -33,23 +33,41 @@ class TestGame(unittest.TestCase):
         self.game.add_players(self.player3)  
         self.assertEqual("Two players only", self.game.add_players(self.player3))
     
-    def test_return_winner_rock(self):
+    def test_return_winner_rock_player1(self):
         self.game.add_players(self.player1)
         self.game.add_players(self.player2)
         winner = Game.return_winner(self, self.game)
-        self.assertEqual("Rock Wins!", winner)
+        self.assertEqual("Player 1 wins by playing rock!", winner)
+    
+    def test_return_winner_rock_player2(self):
+        self.game.add_players(self.player2)
+        self.game.add_players(self.player1)
+        winner = Game.return_winner(self, self.game)
+        self.assertEqual("Player 2 wins by playing rock!", winner)
 
-    def test_return_winner_scissors(self):
+    def test_return_winner_scissors_player1(self):
         self.game.add_players(self.player2)
         self.game.add_players(self.player3)
         winner = Game.return_winner(self, self.game)
-        self.assertEqual("Scissors Win!", winner)
+        self.assertEqual("Player 1 wins by playing scissors!", winner)
 
-    def test_return_winner_paper(self):
+    def test_return_winner_scissors_player1(self):
+        self.game.add_players(self.player3)
+        self.game.add_players(self.player2)
+        winner = Game.return_winner(self, self.game)
+        self.assertEqual("Player 2 wins by playing scissors!", winner)
+
+    def test_return_winner_paper_player1(self):
+        self.game.add_players(self.player3)
+        self.game.add_players(self.player1)
+        winner = Game.return_winner(self, self.game)
+        self.assertEqual("Player 1 wins by playing paper!", winner)
+
+    def test_return_winner_paper_player2(self):
         self.game.add_players(self.player1)
         self.game.add_players(self.player3)
         winner = Game.return_winner(self, self.game)
-        self.assertEqual("Paper Wins!", winner)
+        self.assertEqual("Player 2 wins by playing paper!", winner)
     
     def test_return_winner_none(self):
         self.game.add_players(self.player2)
