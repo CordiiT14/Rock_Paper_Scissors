@@ -5,32 +5,30 @@
     <h2>Lets play a game!</h2>
     <section>
         <div>
-            <form>
+            <form action="/play" method="post">
                 <h3>Player 1</h3>
                 <label for="player1_name">Name:</label>
                 <input type="text" name="player1_name" id="player1_name"> 
-                <label for="rock">Rock:</label>
-                <input type="radio" id="p1rock" name="p1rock" value="rock">
-                <label for="paper">Paper:</label>
-                <input type="radio" id="p1paper" name="p1paper" value="paper">
-                <label for="scissors">Scissors:</label>
-                <input type="radio" id="p1scissors" name="p1scissors" value="scissors">
+                <select name="p1_choice" id="p1_choice">
+                    <option value="rock">Rock</option>
+                    <option value="paper">Paper</option>
+                    <option value="scissors">Scissors</option>
+                </select>
 
 
                 <h3>Player 2</h3>
                 <label for="player2_name">Name:</label>
                 <input type="text" name="player2_name" id="player2_name"> 
-                <label for="rock">Rock:</label>
-                <input type="radio" id="p2rock" name="p2rock" value="rock">
-                <label for="paper">Paper:</label>
-                <input type="radio" id="p2paper" name="p2paper" value="paper">
-                <label for="scissors">Scissors:</label>
-                <input type="radio" id="p2scissors" name="p2scissors" value="scissors">
+                <select name="p2_choice" id="p1_choice">
+                    <option value="rock">Rock</option>
+                    <option value="paper">Paper</option>
+                    <option value="scissors">Scissors</option>
+                </select>
                 
                 <input type="submit" value="Play">
             </form>
         </div>
-
+        {{winner}}
     
     </section>
 
