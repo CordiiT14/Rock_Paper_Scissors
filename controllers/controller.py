@@ -1,4 +1,4 @@
-from flask import redirect, render_template, request, redirect
+from flask import redirect, render_template, request, redirect, session
 from app import app
 from models.player import Player
 from models.game import Game
@@ -11,12 +11,24 @@ def index():
 def rock_win():
     return render_template('rock.html', title="Rock Wins")
 
+@app.route('/scissors/rock')
+def rock_win_alt():
+    return render_template('rock.html', title="Rock Wins", winner=winner)
+
 @app.route('/scissors/paper')
 def scissors_win():
-    return render_template('scissors.html', title='Scissors Wins', )
+    return render_template('scissors.html', title='Scissors Wins' )
+
+@app.route('/paper/scissors')
+def scissors_win_alt():
+    return render_template('scissors.html', title='Scissors Wins' )
 
 @app.route('/paper/rock')
 def paper_win():
+    return render_template('paper.html', title='Paper Wins', )
+
+@app.route('/rock/paper')
+def paper_win_alt():
     return render_template('paper.html', title='Paper Wins', )
 
 @app.route('/play', methods=['POST'])
@@ -31,6 +43,6 @@ def display_winner():
         game = Game()
         game.add_players(player1)
         game.add_players(player2)
-        winner = game.return_winner(game)
-        # return redirect(f'/<player_1_choice>/<player_2_choice>')
-        return render_template('index.html', title='The Winner is...', winner=winner )
+        winner= game.return_winner(game)
+        return redirect(f'/{player_1_choice}/{player_2_choice}')
+        # return render_template('index.html', title='The Winner is...', winner=winner )
