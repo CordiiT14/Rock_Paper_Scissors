@@ -2,12 +2,18 @@ from random import choices
 from models.player import Player
 
 class Game():
-    def __init__(self, player1, player2):
-        self.players = [player1, player2]
+    def __init__(self, ):
+        self.players = []
 
+    def add_players(self, player):
+        if len(self.players) < 2:
+            self.players.append(player)
+            return
+        else:
+            return "Two players only"
 
-    def return_winner(players):
-        choices_played = [players[0].choice.lower(), players[1].choice.lower()]
+    def return_winner(self, game):
+        choices_played = [game.players[0].choice, game.players[1].choice]
         if "rock" in choices_played and "scissors" in choices_played:
             return "Rock Wins!"
         if "scissors" in choices_played and "paper" in choices_played:
