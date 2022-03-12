@@ -1,4 +1,4 @@
-from random import choices
+import random
 from models.player import Player
 
 class Game():
@@ -32,3 +32,9 @@ class Game():
             return 'Player 1'
         else:
             return 'Player 2'
+
+    def computer_player(self):
+        choices = ['rock', 'paper', 'scissors']
+        computer_choice = random.choice(choices)
+        computer_player = Player('Computer', computer_choice)
+        return computer_player 
