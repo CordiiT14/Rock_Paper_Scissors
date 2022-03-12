@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+</section>
+<section>
+    <div> 
+        <h3>Player 1:</h3>
+        <p>{{player1.name}} played {{player1.choice}}</p>
+        <h3>Player 2:</h3>
+        <p>{{player2.name}} played {{player2.choice}}</p>
+
+    </div>
+    <div>
+        <p>{{winning_player}} wins by playing {{winner}}!</p>
+    </div>
+</section>
+<section>
+    <a href="/vscomputer">Play again!</a>
+</section>
+
+{% endblock %}

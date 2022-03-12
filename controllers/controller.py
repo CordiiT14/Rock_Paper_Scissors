@@ -44,14 +44,14 @@ def play_computer():
     player_1_name = request.form['player1_name']
     player_1_choice = request.form['p1_choice']
     player1= Player(player_1_name, player_1_choice)
-    # player2 = Player.computer_player()
     game = Game()
     game.add_players(player1)
     game.add_players(game.computer_player())
+    # print(game.players[1].choice)
     winner = game.return_winner(game)
     if winner != None:
-        winning_player = Game.display_winner(player1, winner)
-        return render_template('results.html', title='The Winner is..', winning_player=winning_player , winner=winner, player1=player1, player2='Computer')
+        winning_player = game.display_winner(player1, winner)
+        return render_template('compresults.html', title='The Winner is..', winning_player=winning_player , winner=winner, player1=player1, player2=game.players[1])
     else: 
         return redirect('/draw')
 
