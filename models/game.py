@@ -16,16 +16,19 @@ class Game():
     def return_winner(self, game):
         choices_played = [game.players[0].choice, game.players[1].choice]
         if "rock" in choices_played and "scissors" in choices_played:
-            return '/rock/scissors'
+            # return '/rock/scissors'
+            return 'rock'
         if "scissors" in choices_played and "paper" in choices_played:
-            return '/scissors/rock'
+            # return '/scissors/rock'
+            return 'scissors'
         if "paper" in choices_played and "rock" in choices_played:
-            return '/paper/rock'
+            # return '/paper/rock'
+            return 'paper'
         else:
             return
 
-    # def display_winner(self, player1, winning_choice):
-    #     if player1.choice == winning_choice:
-    #         return 'Player 1'
-    #     else:
-    #         return 'Player 2'
+    def display_winner(self, player1, winning_choice):
+        if player1.choice == winning_choice:
+            return 'Player 1'
+        else:
+            return 'Player 2'
