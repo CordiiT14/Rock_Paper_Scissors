@@ -12,23 +12,20 @@ class Game():
         else:
             return "Two players only"
 
+    
     def return_winner(self, game):
         choices_played = [game.players[0].choice, game.players[1].choice]
         if "rock" in choices_played and "scissors" in choices_played:
-            if game.players[0].choice == "rock":
-                return "Player 1 wins by playing rock!"
-            else:
-                return 'Player 2 wins by playing rock!'
+            return '/rock/scissors'
         if "scissors" in choices_played and "paper" in choices_played:
-            if game.players[0].choice == "scissors":
-                return "Player 1 wins by playing scissors!"
-            else:
-                return "Player 2 wins by playing scissors!"
+            return '/scissors/rock'
         if "paper" in choices_played and "rock" in choices_played:
-            if game.players[0].choice == "paper":
-                return "Player 1 wins by playing paper!"
-            else:
-                return "Player 2 wins by playing paper!"
+            return '/paper/rock'
         else:
             return
-        
+
+    # def display_winner(self, player1, winning_choice):
+    #     if player1.choice == winning_choice:
+    #         return 'Player 1'
+    #     else:
+    #         return 'Player 2'
