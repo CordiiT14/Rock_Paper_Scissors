@@ -1,8 +1,10 @@
+/* Universal */
 header {
     background-color: #81B29A;
     color: #F4F1DE;
     padding: 15px;
-    font-family: 'Fredoka', sans-serif; 
+    font-family: 'Fredoka', sans-serif;
+    text-align: center;
 }
 
 header > nav > a {
@@ -25,4 +27,12 @@ footer {
     background-color: #81B29A;
     color: #F4F1DE;
     font-family: 'Fredoka', sans-serif; 
+    text-align: center;
+}
+
+/* Play a game */
+
+h2 {
+    color: #F4F1DE;
+    text-align: center;
 }
