@@ -3,31 +3,33 @@
 {% block content %}
 <body>
     <h2>Lets play a game!</h2>
-    <section>
-        <div>
+    <section class="container">
+        <div class="players">
             <form action="/play" method="post">
                 <h3>Player 1</h3>
                 <label for="player1_name">Name:</label>
-                <input type="text" name="player1_name" id="player1_name"> 
+                <input type="text" name="player1_name" id="player1_name"> <br>
+                <label for="player1_choice">Pick your play:</label>
                 <select name="p1_choice" id="p1_choice">
                     <option value="rock">Rock</option>
                     <option value="paper">Paper</option>
                     <option value="scissors">Scissors</option>
                 </select>
-
-
+        </div>        
+        <div class="players">
                 <h3>Player 2</h3>
                 <label for="player2_name">Name:</label>
-                <input type="text" name="player2_name" id="player2_name"> 
+                <input type="text" name="player2_name" id="player2_name"> <br>
+                <label for="player2_choice">Pick your play:</label>
                 <select name="p2_choice" id="p1_choice">
                     <option value="rock">Rock</option>
                     <option value="paper">Paper</option>
                     <option value="scissors">Scissors</option>
                 </select>
-                
-                <input type="submit" value="Play">
+        </div>                
+                <input class="button" type="submit" value="Play">
             </form>
-        </div>
+
 
 
 
