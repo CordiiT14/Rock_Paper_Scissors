@@ -1,0 +1,28 @@
+header {
+    background-color: #81B29A;
+    color: #F4F1DE;
+    padding: 15px;
+    font-family: 'Fredoka', sans-serif; 
+}
+
+header > nav > a {
+    text-decoration: none;
+    color: #3D405B;
+    padding: 5px;
+}
+
+header > nav > a:hover {
+    background-color: #F2CC8F;
+}
+
+body {
+    background-color: #E07A5F;
+    margin: 0;
+    font-family: 'Fredoka', sans-serif; 
+}
+
+footer {
+    background-color: #81B29A;
+    color: #F4F1DE;
+    font-family: 'Fredoka', sans-serif; 
+}
