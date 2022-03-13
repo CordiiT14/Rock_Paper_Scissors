@@ -24,12 +24,37 @@ body {
     font-family: 'Fredoka', sans-serif; 
 }
 
+.play-again {
+    text-align: center;
+}
+
 footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
     background-color: #81B29A;
     color: #F4F1DE;
     font-family: 'Fredoka', sans-serif; 
     text-align: center;
 }
+
+/* Home */
+
+.rules-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #F2CC8F;
+    text-align: center;
+    padding: 10px;
+}
+
+.rules-container li {
+    list-style-position: inside;
+}
+
+
 
 /* Play a game */
 
@@ -39,18 +64,26 @@ h2 {
 }
 
 .container {
-    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .players {
+    
     background-color: #F2CC8F;
-    max-width: 350px;
+    min-width: 350px;
     min-height: 150px;
     text-align: center;
     padding: 10px;
     margin: 5px;
     border-radius: 5px;
 
+}
+
+.players input{
+    margin: 10px;
 }
 
 /* Play submit */
@@ -62,15 +95,37 @@ h2 {
     border-radius: 5px;
     font-size: medium;
     padding: 5px;
-    
+    margin: 15px;
 
 }
+
+.button:hover {
+    box-shadow: 2px 5px #3D405B;
+}
+
+/* results page */
+
+
+.winner {
+    font-size: large;
+    background-color: #F2CC8F;
+    color: #3D405B;
+    margin: 10px;
+    padding: 5px;
+    border-radius: 5px;
+}
+.play-again{
+    text-align: center;
+    margin: 20px;
+}
+
 
 /* It's a Draw */
 
 section a {
     text-decoration: none;
     color: #3D405B;
+    margin: 10px;
 }
 
 section a:hover {

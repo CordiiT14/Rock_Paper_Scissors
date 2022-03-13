@@ -4,18 +4,17 @@
 
 </section>
 <section class="container">
-    <div class="players"> 
-        <h3>Player 1:</h3>
-        <p>{{player1.name}} played {{player1.choice}}</p>
-        <h3>Player 2:</h3>
-        <p>{{player2.name}} played {{player2.choice}}</p>
+    <div> 
+
+        <p>Player 1 - {{player1.name}} played {{player1.choice}}</p>
+        <p>Player 2 - {{player2.name}} played {{player2.choice}}</p>
 
     </div>
-    <div>
+    <div class="winner">
         <p>{{winning_player}} wins by playing {{winner}}!</p>
     </div>
 </section>
-<section>
+<section class="play-again">
     <a href="/vscomputer">Play again!</a>
 </section>
 

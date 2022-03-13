@@ -12,17 +12,16 @@
                 <input type="text" name="player1_name" id="player1_name"> <br>
                 <label for="player1_choice">Pick your play:</label>
                 <select name="p1_choice" id="p1_choice">
-                    <option value="rock">Rock</option>
-                    <option value="paper">Paper</option>
-                    <option value="scissors">Scissors</option>
+                    <option selected disabled hidden style="display:none" value=""></option>
+                    <option value="rock">Rock &#9994;</option>
+                    <option value="paper">Paper &#9995;</option>
+                    <option value="scissors">Scissors &#9996;</option>
                 </select>
-                
+        </div>       
                 <input class="button" type="submit" value="Play">
             </form>
-        </div>
-
-
-
+        
+    </section>  
 </body>
 
 {% endblock %}
