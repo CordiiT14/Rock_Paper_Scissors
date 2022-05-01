@@ -16,7 +16,7 @@ def its_a_draw():
     return render_template('draw.html', title='Draw! Try Again')
 
 
-@app.route('/play', methods=['GET','POST'])
+@app.route('/play', methods=['POST'])
 def play():
         player_1_name = request.form['player1_name']
         player_1_choice = request.form['p1_choice']
