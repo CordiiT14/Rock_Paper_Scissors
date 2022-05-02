@@ -54,6 +54,10 @@ footer {
     list-style-position: inside;
 }
 
+.rules-container ol {
+    padding: 0;
+}
+
 
 
 /* Play a game */
