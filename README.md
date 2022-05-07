@@ -6,5 +6,9 @@
 
 - Clone Repo
 - Command line:
-        flask run
+> flask run
+
+## App in Action:
+
+![screen-gif](./rockpaperscissors.gif)
         
